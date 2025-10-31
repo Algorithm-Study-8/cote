@@ -4,8 +4,12 @@ import java.util.Scanner;
 
 /**
  * 회의실 배정 최대한 많은 회의를 배정하자
+ *
+ * 풀이 시간 : 1시간
+ * 메모리 : 179640KB
+ * 시간 : 1072ms
  */
-public class BOJ1931 {
+public class baekjoon_1931 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int count = sc.nextInt();
