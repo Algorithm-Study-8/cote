@@ -1,29 +1,18 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- * 입력값을 x5+y3으로 표현할 때, x+y의 최소값은 무엇인가?
- *
- * 풀이 시간 : 5분
- * 메모리 : 14368KB
- * 시간 : 100ms
- */
 public class baekjoon_2839 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int a = n / 5;
-        int s = n % 5;
-        while (true) {
-            if (s % 3 == 0) {
-                System.out.println(s / 3 + a);
-                break;
-            }
-            if (a == 0) {
-                System.out.println("-1");
-                break;
-            }
-            a--;
-            s += 5;
+        int s = sc.nextInt();
+        int[] array =  new int[5001];
+        Arrays.fill(array, 2000);
+        array[3] = 1;
+        array[5] = 1;
+        for (int i = 6; i < s+1; i++) {
+            array[i] = Math.min(array[i-5], array[i-3]) + 1;
         }
+
+        System.out.println(array[s] >= 2000 ? -1 : array[s]);
     }
 }
