@@ -1,3 +1,5 @@
+package baekjoon;
+
 import java.util.Arrays;
 
 public class programmers_lifeboat {
